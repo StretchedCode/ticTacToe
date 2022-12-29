@@ -7,10 +7,20 @@
 .container{
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .gameBoardContainer{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
-    grid-template-rows: repeat(auto-fit, minmax(200px, 300px));
+    grid-template-columns: repeat(3, minmax(100px, 200px));
+    grid-template-rows: repeat(3, minmax(100px, 200px));
+}
+
+.gameBoardContainer > *{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-color: black;
 }
