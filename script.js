@@ -23,16 +23,16 @@ const displayController = ((board) => {
   }
 })(gameBoard.tiles);
 
-const gameController = ((board, playerOne, playerTwo) => {
-  let turns = 0;
+const gameController = ((board, player) => {
+  const turns = 0;
 
-  if (turns % 2 === 0) {
+  board.forEach((tile) => {
+    tile.addEventListener('click');
+  });
 
-  } else {
+  function takeTurn() {
 
   }
-
-  turns += 1;
-})();
+})(gameBoard.tiles);
 
 gameBoard.createTiles();
