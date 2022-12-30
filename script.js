@@ -4,7 +4,7 @@ const gameBoard = (() => {
 
   function createTiles() {
     for (let i = 0; i < 9; i += 1) {
-      const tile = document.createElement('div');
+      const tile = document.createElement('button');
       tile.setAttribute('data-index', i);
       tile.innerText = 'Test';
       tiles.push(tile);
