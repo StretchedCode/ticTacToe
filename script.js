@@ -24,7 +24,15 @@ const displayController = ((board) => {
 })(gameBoard.tiles);
 
 const gameController = ((board, playerOne, playerTwo) => {
+  let turns = 0;
 
+  if (turns % 2 === 0) {
+
+  } else {
+
+  }
+
+  turns += 1;
 })();
 
 gameBoard.createTiles();
