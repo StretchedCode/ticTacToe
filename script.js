@@ -23,4 +23,8 @@ const displayController = ((board) => {
   }
 })(gameBoard.tiles);
 
+const gameController = ((board, playerOne, playerTwo) => {
+
+})();
+
 gameBoard.createTiles();
