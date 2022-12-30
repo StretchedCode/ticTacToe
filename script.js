@@ -3,7 +3,6 @@ const gameController = (() => {
   function takeTurn(tile) {
     if (turns % 2 === 0) { tile.innerText = 'X'; } else {
       tile.innerText = 'O';
-      console.log('test');
     }
     turns += 1;
   }
