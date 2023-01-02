@@ -1,9 +1,7 @@
 const gameController = (() => {
   let turns = 0;
   function takeTurn(tile) {
-    if (tile.getAttribute('used') === 'true') {
-
-    } else {
+    if (tile.getAttribute('used') === 'true') {} else {
       if (turns % 2 === 0) { tile.innerText = 'X'; } else {
         tile.innerText = 'O';
       }
