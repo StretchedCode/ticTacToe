@@ -11,6 +11,10 @@ const gameController = (() => {
     }
   }
 
+  function checkGame(tiles) {
+
+  }
+
   return { takeTurn };
 })();
 
