@@ -36,8 +36,12 @@ const gameController = (() => {
       }
     }
 
-    circleWinConditions();
-    crossWinConditions();
+    if (turnCount === 9) {
+      console.log('its a tie!');
+    } else {
+      circleWinConditions();
+      crossWinConditions();
+    }
   }
 
   return { takeTurn };
