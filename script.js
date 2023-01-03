@@ -12,7 +12,11 @@ const gameController = (() => {
   }
 
   function checkGame(tiles) {
+    // This function checks for win conditions throughout the gameboard, and calls a tie if needed.
 
+    function circleWinConditions() {
+      if (tiles[0].innerText === 'O' && tiles[4].innerText === 'O' && tiles[8].innerText === 'O') { }
+    }
   }
 
   return { takeTurn };
