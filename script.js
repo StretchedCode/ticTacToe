@@ -15,7 +15,15 @@ const gameController = (() => {
     // This function checks for win conditions throughout the gameboard, and calls a tie if needed.
 
     function circleWinConditions() {
-      if (tiles[0].innerText === 'O' && tiles[4].innerText === 'O' && tiles[8].innerText === 'O') { }
+      if ((tiles[0].innerText === 'O' && tiles[4].innerText === 'O' && tiles[8].innerText === 'O') || (tiles[2].innerText === 'O' && tiles[4].innerText === 'O' && tiles[6].innerText === 'O')){
+        console.log('circle wins!');
+    }
+    else if ((tiles[0].innerText === 'O' && tiles[1].innerText === 'O' && tiles[2].innerText === 'O') || (tiles[3].innerText === 'O' && tiles[4].innerText === 'O' && tiles[5].innerText === 'O') || (tiles[6].innerText === 'O' && tiles[7].innerText === 'O' && tiles[8].innerText === 'O')){
+        console.log('circle wins!');
+    }
+
+    else if ((tiles[0].innerText === 'O' && tiles[3].innerText === 'O' && tiles[6].innerText === 'O') || (tiles[1].innerText === 'O' && tiles[4].innerText === 'O' && tiles[7].innerText === 'O') || (tiles[2].innerText === 'O' && tiles[5].innerText === 'O' && tiles[8].innerText === 'O')){
+        console.log('circle wins!');
     }
   }
 
