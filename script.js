@@ -7,6 +7,7 @@ const gameController = (() => {
       }
 
       tile.setAttribute('used', true);
+      tile.style.borderColor = 'green';
       turns += 1;
 
       checkGame(tiles, turns);
