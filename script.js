@@ -50,7 +50,9 @@ const gameController = (() => {
 
 const gameBoard = ((turnFunction) => {
   const tiles = [];
-  const boardContainer = document.querySelector('.gameBoardContainer');
+  const container = document.querySelector('.container');
+  const boardContainer = document.createElement('div');
+  boardContainer.classList.add('gameBoardContainer');
 
   function createTiles() {
     for (let i = 0; i < 9; i += 1) {
@@ -63,6 +65,8 @@ const gameBoard = ((turnFunction) => {
     tiles.forEach((tile) => {
       boardContainer.append(tile);
     });
+
+    container.append(boardContainer);
   }
 
   return { createTiles, tiles };
