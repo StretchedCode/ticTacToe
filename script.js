@@ -72,4 +72,4 @@ const gameBoard = ((turnFunction) => {
   return { createTiles, tiles };
 })(gameController.takeTurn);
 
-gameBoard.createTiles();
+// gameBoard.createTiles();
