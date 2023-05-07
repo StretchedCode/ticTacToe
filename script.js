@@ -7,7 +7,7 @@ const gameController = (() => {
       }
 
       tile.setAttribute('used', true);
-      tile.style.borderColor = 'green';
+      tile.style.borderColor = 'black';
       turns += 1;
 
       checkGame(tiles, turns);
@@ -72,9 +72,31 @@ const gameBoard = ((turnFunction) => {
   return { createTiles, tiles };
 })(gameController.takeTurn);
 
-const gameSetup = (() => {
-  formButton = document.querySelector('#submit');
-})();
+const gameSetup = ((board) => {
+  const player = (name) => {
+    const congratulations = () => `Congratulations ${name} for winning Tic-Tac-Toe!`;
 
-// gameBoard.createTiles();
+    return { name, congratulations };
+  };
+
+  const formButton = document.getElementById('submit');
+  const playerOne = null;
+  const playerTwo = null;
+
+  formButton.addEventListener('click', (playerOne, playerTwo) => {
+    const nameX = document.getElementsByName('playerX').value;
+    const nameO = document.getElementsByName('playerO').value;
+
+    playerOne = player(nameX);
+    playerTwo = player(nameO);
+
+    const form = document.getElementById('nameForm');
+    form.remove();
+
+    board.createTiles();
+  });
+
+  return { playerOne, playerTwo };
+})(gameBoard);
+
 console.log('Hello');
