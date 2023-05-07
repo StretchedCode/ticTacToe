@@ -72,4 +72,9 @@ const gameBoard = ((turnFunction) => {
   return { createTiles, tiles };
 })(gameController.takeTurn);
 
+const gameSetup = (() => {
+  formButton = document.querySelector('#submit');
+})();
+
 // gameBoard.createTiles();
+console.log('Hello');
